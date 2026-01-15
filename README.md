@@ -47,19 +47,44 @@ The developed pipeline consisted of the following stages:
 - noise reduction,
 - handling variability in SEM magnification.
 
-5.2 Annotation and Training Data Preparation
+5.2. Annotation and Training Data Preparation
 - manual annotation using tools such as CVAT,
 - mask-based labeling for selected defect classes,
 - dataset preparation using external annotation pipelines.
 
-5.3 Model Selection
+5.3. Model Selection
 A YOLO-based architecture (YOLOv8) was selected due to:
 - efficient inference,
 - ability to detect multiple structures in a single image,
 - support for segmentation masks,
 - relatively low hardware requirements.
 
-5.4 Model Training and Evaluation
+5.4. Model Training and Evaluation
 - local model training on annotated datasets,
 - iterative refinement of class definitions,
 - qualitative and quantitative evaluation of detection accuracy.
+
+## 6. Post-processing and Physical Parameter Estimation
+For detected fracture patterns enabling mechanical interpretation:
+- geometric measurements were extracted from detected regions,
+- fracture force was estimated based on mirror diameter and material constants.
+
+To improve force calculation:
+- a manual override mechanism was implemented,
+- users could manually define the mirror diameter,
+- corrected values were saved instead of automatic estimates.
+  
+This design enables future use of corrected measurements as additional training data.
+
+## 7. Output and Data Logging
+The system outputs results in a structured format:
+- detected defect types,
+- estimated fracture parameters (when applicable),
+- user-corrected values.
+
+All results are automatically saved to CSV files, enabling:
+- further statistical analysis,
+- traceability of decisions,
+- integration with external tools.
+
+## 8. 
