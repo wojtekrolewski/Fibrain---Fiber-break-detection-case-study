@@ -38,3 +38,28 @@ Based on domain analysis and image review, multiple fracture-related patterns we
 Due to data imbalance and visual ambiguity, the final solution focused on a reduced set of reliably detectable classes, which significantly improved classification performance.
 
 This design decision reflects a trade-off between model complexity and practical reliability.
+
+## 5. Approach
+The developed pipeline consisted of the following stages:
+
+5.1. Image Preprocessing
+- normalization and contrast enhancement,
+- noise reduction,
+- handling variability in SEM magnification.
+
+5.2 Annotation and Training Data Preparation
+- manual annotation using tools such as CVAT,
+- mask-based labeling for selected defect classes,
+- dataset preparation using external annotation pipelines.
+
+5.3 Model Selection
+A YOLO-based architecture (YOLOv8) was selected due to:
+- efficient inference,
+- ability to detect multiple structures in a single image,
+- support for segmentation masks,
+- relatively low hardware requirements.
+
+5.4 Model Training and Evaluation
+- local model training on annotated datasets,
+- iterative refinement of class definitions,
+- qualitative and quantitative evaluation of detection accuracy.
