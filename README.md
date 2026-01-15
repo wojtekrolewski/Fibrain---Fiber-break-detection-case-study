@@ -87,4 +87,22 @@ All results are automatically saved to CSV files, enabling:
 - traceability of decisions,
 - integration with external tools.
 
-## 8. 
+## 8. Challenges
+Key challenges encountered during the project:
+- strong class imbalance,
+- limited number of rare defect examples,
+- sensitivity to image scale and quality,
+- ambiguity of certain defect types in 2D SEM images.
+
+These constraints directly influenced modeling and system design decisions.
+
+## 9. Outcomes
+The project demonstrated that:
+- computer vision models can support automated fracture analysis in industrial settings,
+- reducing the number of target classes can significantly improve reliability,
+- combining automatic detection with human-in-the-loop correction increases system usability.
+
+## 9. Ethical and Confidentiality Note
+This repository intentionally omits proprietary data, images, and implementation details in accordance with industrial confidentiality requirements.
+
+The focus is placed on engineering methodology rather than proprietary solutions.
