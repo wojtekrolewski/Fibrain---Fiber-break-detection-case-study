@@ -3,6 +3,10 @@
 ## 1. Project Context
 This project was conducted during an internship in an industrial manufacturing environment and focused on automated analysis of fiber break sources using SEM (Scanning Electron Microscope) images.
 
+The diagram below presents a high-level overview of the computer vision pipeline developed during an industrial R&D project.
+<img width="984" height="331" alt="image" src="https://github.com/user-attachments/assets/52c62cc7-8a97-400a-8883-08d6052f88a5" />
+
+
 Due to confidentiality constraints, proprietary data, images, and source code are not publicly disclosed.
 This repository presents the methodology, system design, and engineering decisions behind the solution.
 
